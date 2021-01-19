@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+
+    <style>
+      h1 {
+        color: red;
+      }
+
+      input[type='button'] {
+        background-color: #08fa10;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function showAlert(){
+          alert('This is an alert using JS');
+      }
+
+      function writeToTheConsole(){
+          console.log('Write to the console.');
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Title</h1>
+    
+    <input type="button"value="Click me!!" onclick=" showAlert();"/>
+
+    <input type="button"value="Check the console..." onclick=" writeToTheConsole();"/>
+
+    <input type="button"value="inline Javascript" onclick=" alert('This is an alert using JS');"/>
+
+  </body>
+</html>
