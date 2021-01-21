@@ -5,8 +5,8 @@
     <!--link href="style.css" rel="stylesheet"/-->
     <script type="text/javascript">
 
-      function writeText(){
-          document.write('Write text to the console.');
+      function writeLink(){
+          document.write('<a href="#">This is a link</a>');
       }
 
       function writeToTheConsole(){
@@ -19,7 +19,7 @@
 
     <h1>Title</h1>
     <div>Using document.write() after an HTML document is fully loaded, will delete all existing HTML.</div>
-    <input type="button"value="btn #1" onclick=" writeText();"/>
+    <input type="button"value="btn #1" onclick=" writeLink();"/>
 
     <input type="button"value="btn #2" onclick=" writeToTheConsole();"/>
   </body>
