@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Computer Science</title>
+
+	<script type="text/javascript">
+		let username = "romeo";
+		let email = "myJuliet2003@crcmail.com";
+		// let option1 ="cats";
+		// let option2 ="dogs";
+
+		function setValues(){
+			document.getElementById("idUserName").value = username;
+			document.getElementById("idEmail").value = email;
+		}
+
+		function setPrefered1(){
+			document.getElementById("idAnimal").value = "Cats";
+		}
+
+		function setPrefered2(){
+			document.getElementById("idAnimal").value = "Dogs";
+		}
+
+
+	</script>	
+</head>
+<body>
+	<header>
+	<h1>DOM Selectors</h1>
+	</header>
+	<h2>Changin Values in HTML elements with JS</h2>
+	<button onclick="setValues();">Show Information</button>
+
+	<p>Username: <input type="text" id="idUserName"/><p/>
+	<p>Email: <input type="text" id="idEmail"/><p/>
+
+	<p>Please select your prefered Animal::</p>
+	<input type="radio" id="idAnimalOpt" name="animal" value="cats" onclick="setPrefered1();" >
+	<label for="cats">Cats</label><br>
+	<input type="radio" id="idAnimalOpt" name="animal" value="dogs" onclick="setPrefered2();" >
+	<label for="dogs">Dogs</label><br>
+
+	<p>Selection: <input type="text" id="idAnimal"/><p/>
+</body>
+</html>

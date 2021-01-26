@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Computer Science</title>
+
+	<script type="text/javascript">
+		let firstName = "Justin";
+
+		function setValues(){
+			document.getElementById("idTxtFirstName").value = firstName;
+		}
+
+		function clearFields(){
+			document.getElementById("idTxtFirstName").value = "";
+		}
+	</script>	
+</head>
+<body>
+	<header>
+	<h1>Exercise 2</h1>
+	</header>
+	<h2>Show Information</h2>
+	<input type="button" value="Show information" onclick="setValues();"/>
+	<input type="button" value="Clear" onclick="clearFields();"/>
+
+	<p>Name: <input type="text" id="idTxtFirstName"/><p/>
+	<p>Last Name: <input type="text" id="idTxtLastName"/><p/>
+	<p>Name: <input type="text" id="idTxtName"/><p/>
+	<p>Email: <input type="text" id="idTxtEmail"/><p/>
+</body>
+</html>
