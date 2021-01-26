@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <!--link href="style.css" rel="stylesheet"/-->
+    <script type="text/javascript">
+
+      function writeLink(){
+        var x = 5;
+        var y = 6;
+        var z = x + y;
+        console.log(z);
+        window.alert('Check the console');
+      }
+
+      function writeNewBtn(){
+          document.write('<input type="button"value="new btn" onclick=" writeNewBtn();"/>');
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Title</h1>
+    <div>Using document.write() after an HTML document is fully loaded, will delete all existing HTML.</div>
+    <input type="button"value="btn #1" onclick=" writeLink();"/>
+
+    <input type="button"value="btn #2" onclick=" writeNewBtn();"/>
+  </body>
+</html>
