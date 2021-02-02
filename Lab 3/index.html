@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    //#################################
+    //1.- length
+    let text="When in Rome, do as the Romans do";
+    document.write("The lenght of '" + text +'\' is: ' + text.length);
+    document.write("<br>");
+    //get the lenght of this string: the squeaky wheel gets the grease
+
+    //#################################
+    //2.- indexOf
+    let email="myuser2003@gmail.com";
+
+    //#################################
+    //3.- substring
+    let strTmp="An apple a day keeps the doctor away.";
+
+    //#################################
+    //4.- create a function that replace the DOM text with the email user and email domain
+    function handlerEmail(){
+        let email = document.getElementById('email').textContent;
+
+        let emailuser = document.getElementById('emailUser');
+        let emaildomain = document.getElementById('emailDomain');
+
+        let resultText = "";
+
+        let index = email.indexOf('@');
+        emailuser.innerHTML =  'Implement this';
+        emaildomain.innerHTML =  'Implement this';
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <p>Hi, my email is: </p>
+        <p id='email'>myUser2003@crcmail.ca</p>
+
+        <p>The email user is: <span id='emailUser'>________</span></p>
+    
+        <p>The email domain is: <span id='emailDomain' >________</span></p>
+        
+        <input type="button" value="Click me!!" onclick="handlerEmail()">
+    </div>
+</body>
+</html>
