@@ -14,7 +14,7 @@
 1. Optimize your script by changing your 5 functions into **1 function** which will accepts two parameters, the question number and the answer provided by the pilot.
 2. Use **switch/case** structure. Your case structure should determine which question was selected, and then inside each case there should be an **if/else** structure to inform the pilot whether they got the question right or wrong.
 
-`Test your script thoroughly before getting this step checked off./`
+`Test your script thoroughly before getting this step checked off.`
 
 # Part 3
 
