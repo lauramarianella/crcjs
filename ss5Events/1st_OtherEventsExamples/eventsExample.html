@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleClick(e){
+            alert('you clicked me');
+        }
+
+        function handleTyping(e){
+
+            alert(`keydown::: code: ${e.code}, keyCode: ${e.keyCode}`);
+        }
+
+        function handler2(e){
+            alert(`keyup::: code: ${e.code}, keyCode: ${e.keyCode}`);
+        }
+        function resizeMe(e){
+            if(document.getElementById('idAdd').style.width<'200'){
+                document.getElementById('idAdd').style.width = '200px';
+                document.getElementById('idAdd').style.height = '200px';
+            }else{
+                document.getElementById('idAdd').style.width = '100px';
+                document.getElementById('idAdd').style.height = '100px';
+            }
+            
+        }
+    </script>
+</head>
+<body onload="alert('loading page');" onresize="alert('resizing')">
+    <input type="text" onkeydown="handleTyping(event);" /><br/>
+    <input type="text" onkeyup="handler2(event);"/><br/>
+    Click<input type="button" onclick="handleClick(event);" value="click me!!"/><br/>
+    
+</body>
+</html>

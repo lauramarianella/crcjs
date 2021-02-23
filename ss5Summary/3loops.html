@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    let myArrayInt = [1, 2, 3,4, 5];
+    
+    function accumulator(){
+        let acc=0;
+        for(let i=0; i<myArrayInt.length;i++){
+            acc = acc+ myArrayInt[i];
+        }
+        console.log(acc);
+    }
+
+    let myArrayStr = ["Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday", "Sunday"];
+    function concatenation(){
+        let strTmp="";
+        for(let i=0; i<myArrayStr.length;i++){
+            strTmp = strTmp + myArrayStr[i];
+        }
+        console.log(strTmp);
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="click me!!" onclick="accumulator();"/>
+    <input type="button" value="click me 2!!" onclick="concatenation();"/>
+</body>
+</html>
