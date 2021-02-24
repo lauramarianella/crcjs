@@ -18,16 +18,6 @@
         function handler2(e){
             alert(`keyup::: code: ${e.code}, keyCode: ${e.keyCode}`);
         }
-        function resizeMe(e){
-            if(document.getElementById('idAdd').style.width<'200'){
-                document.getElementById('idAdd').style.width = '200px';
-                document.getElementById('idAdd').style.height = '200px';
-            }else{
-                document.getElementById('idAdd').style.width = '100px';
-                document.getElementById('idAdd').style.height = '100px';
-            }
-            
-        }
     </script>
 </head>
 <body onload="alert('loading page');" onresize="alert('resizing')">
