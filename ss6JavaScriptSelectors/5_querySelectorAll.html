@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html { font-family: sans-serif; color: #333; }
+        body { max-width: 250px; margin: 0 auto; padding: 0 15px; }
+        div { padding: 10px; margin: 5px; border: 1px solid #dedede; }
+        p,span { padding: 10px; margin: 5px; border: 1px solid #dedede; }
+        .myRedText {color: red; }
+        .myVioletText {color: blueviolet; }
+      </style>
+    <script>
+        function showElements(){
+            let arrayElements = document.querySelectorAll(".myRedText");
+            for(let i=0; i<arrayElements.length;i++){
+                let el = arrayElements[i];
+                let value = el.value;
+                alert(`This is my value: ${value}`);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="idUsername"  name="username" class="myRedText"       value="pakita2003"/><br/>   
+    <p>This is just a paragraph</p>
+    <input type="text" id="idName"      name="name"     class="myVioletText"    value="Pakita"/><br/>   
+    <input type="text" id="idLastName"  name="lastName" class="myRedText"       value="Fedora"/><br/>   
+    <input type="text" id="idEmail"     name="email"    class="myVioletText"    value="pakFed2003@myMail.com"/><br/>
+    <p>This is just another paragraph</p>
+    <h3>My Shopping List<h3/>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <input type="button" onclick="showElements();" value="Click me!!"/>
+
+</body>
+</html>
