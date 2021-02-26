@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        (function(){
+            window.addEventListener("load", initialize);
+            function initialize() {
+                let elBtn1 = document.getElementById('myButton1');
+                elBtn1.addEventListener('click', myClickBtn1kHandler, false);
+            }  
+        })();
+        
+        function myClickBtn1kHandler(){
+            let arrayElements = document.querySelectorAll(".hot");
+            //traverse the array and element classname property set to "myCool"
+        }
+    </script>
+<body>
+    <div id="page">
+        <h1 id="header">List King</h1>
+        <h2>Buy groceries</h2>
+        <ul>
+            <li id="one"    class="cool"><em>fresh</em> figs</li>
+            <li id="two"    class="hot">pine nuts</li>
+            <li id="three"  class="hot">honey</li>
+            <li id="four">balsamic vinegar</li>
+        </ul>
+
+        <input id="myButton1" type="button" onclick="" value="Button1"/><br/>
+    </div>
+
+</body>
+</head>
+</html>
+
+
+
+
+

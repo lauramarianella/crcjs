@@ -1,0 +1,26 @@
+html {
+  font-family: sans-serif;
+  color: #333;
+}
+body {
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+div {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #dedede;
+}
+p,
+span {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #dedede;
+}
+.myRedText {
+  color: red;
+}
+.myVioletText {
+  color: blueviolet;
+}
