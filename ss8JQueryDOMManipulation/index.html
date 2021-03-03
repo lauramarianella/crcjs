@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+    $( document ).ready(function() {
+        $('#myButton').on('click', myClickBtnHandler );
+
+        $('li').on('click', function(){
+                        $(this).remove();//It is the same function in pure JS
+                    }); 
+    });
+        
+        function myClickBtnHandler(e){
+            $('header').addClass('headline');//1
+            //$('li:lt(3)').hide().fadeIn(1500);//2
+            $('li:lt(3)').show().fadeOut(1500);//2
+        }
+        //your code goes here, create the other functions to change the class-style
+    </script>
+<body>
+    <div id="page">
+        <h1 id="header">List</h1>
+        <h2>Buy groceries</h2>
+        <ul>
+            <li id="one"    class="hot"><em>fresh</em> figs</li>
+            <li id="two"    class="hot">pine nuts</li>
+            <li id="three"  class="hot">honey</li>
+            <li id="four">balsamic vinegar</li>
+        </ul>
+
+        <input id="myButton" type="button" value="Button1"/><br/>
+        <input id="myButton2" type="button" value="Button1"/><br/>
+    </div>
+
+</body>
+</head>
+</html>

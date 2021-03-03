@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {  color: #FF0000; 
+                  /*border: 1px dashed green;*/
+                }
+    </style>
+    <!--script src="jquery-3.6.0.slim.js"></script--> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script>
+        //using JQuery 
+        $( document ).ready(function() {
+            jQuery("#username").change(function( event ) {
+                checkUsername();
+            });
+            $("#age").change(function( event ) {
+                checkNumber();
+            });
+        });
+      
+        
+        
+        
+        function checkUsername(){
+            let textFieldUsername       = $('#username');
+            let textFieldErrorUsername  = $('#errorUsername');
+
+            let username = textFieldUsername.val();
+
+            textFieldErrorUsername.html("*");
+            if($.isNumeric(username)){
+                textFieldErrorUsername.html("* No numbers allowed");
+            }
+        }
+
+        function checkNumber(){
+            let age = $('#age').val();
+
+            $('#errorAge').html("*");
+            if(!$.isNumeric(age)){
+                $('#errorAge').html("* Only numbers allowed");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><span class="error">* required field</span></p>
+    Name: <input type="text" name="name" id="username"/><span class="error" id="errorUsername">*</span><br><br>
+    Age: <input type="text" name="age" id="age"/><span class="error" id="errorAge">*</span><br><br>
+</body>
+</html>

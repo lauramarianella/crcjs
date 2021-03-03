@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {  color: #FF0000; 
+                  /*border: 1px dashed green;*/
+                }
+    </style>
+
+
+
+
+       <script>
+        //pure Javascript
+        (function(){
+            window.addEventListener('load', initialize);
+        })();
+
+        function initialize(){
+            let elUsername = document.getElementById('username');
+            elUsername.addEventListener('change', checkUsername);
+
+            let elAge = document.getElementById('age');
+            elAge.addEventListener('change', checkNumber);
+        }
+      
+        function checkUsername(){
+            let textFieldUsername       = document.getElementById('username');
+            let textFieldErrorUsername  = document.getElementById('errorUsername');
+
+            let username = textFieldUsername.value;
+
+            textFieldErrorUsername.innerText = "*";
+            if(!isNaN(username)){
+                textFieldErrorUsername.innerText = "* No numbers allowed";
+            }
+        }
+
+        function checkNumber(){
+            let age = document.getElementById('age').value;
+
+            document.getElementById('errorAge').innerText = "*";            
+            if(isNaN(age)){
+                document.getElementById('errorAge').innerText = "* Only numbers allowed";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><span class="error">* required field</span></p>
+    Name: <input type="text" name="name" id="username"/><span class="error" id="errorUsername">*</span><br><br>
+    Age: <input type="text" name="age" id="age"/><span class="error" id="errorAge">*</span><br><br>
+</body>
+</html>
