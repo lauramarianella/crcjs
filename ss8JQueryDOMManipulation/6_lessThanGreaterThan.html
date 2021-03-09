@@ -12,33 +12,32 @@
 
     <script>
     $( document ).ready(function() {
-        $('#myButton').on('click', myClickBtnHandler );
-
-        $('li').on('click', function(){
-                        $(this).remove();//It is the same function in pure JS
-                    }); 
+      $('#myButton1').on('click', handler1);
+      $('#myButton2').on('click', handler2);
     });
-        
-        function myClickBtnHandler(e){
-            $('header').addClass('headline');//1
-            //$('li:lt(3)').hide().fadeIn(1500);//2
-            $('li:lt(3)').show().fadeOut(1500);//2
-        }
-        //your code goes here, create the other functions to change the class-style
+    function handler1(){
+        $('li:lt(3)').hide().fadeIn(1500);
+    }
+
+    function handler2(){
+        $('li:gt(2)').hide().fadeIn(1500);
+    }
+
     </script>
 <body>
     <div id="page">
         <h1 id="header">List</h1>
-        <h2>Buy groceries</h2>
+        <h2>Buy groceries</h2><br/>
+        <h2>In Maxi</h2>
         <ul>
-            <li id="one"    class="hot"><em>fresh</em> figs</li>
+            <li id="one"    class="cool"><em>fresh</em> figs</li>
             <li id="two"    class="hot">pine nuts</li>
             <li id="three"  class="hot">honey</li>
             <li id="four">balsamic vinegar</li>
         </ul>
 
-        <input id="myButton" type="button" value="Button1"/><br/>
-        <input id="myButton2" type="button" value="Button1"/><br/>
+        <input id="myButton1" type="button" value="less than 3"/><br/>
+        <input id="myButton2" type="button" value="greater than 2"/><br/>
     </div>
 
 </body>
