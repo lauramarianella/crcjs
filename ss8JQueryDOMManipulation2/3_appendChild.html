@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+    $( document ).ready(function() {
+      $('#myButton1').on('click', handlerAppend);
+      $('#myButton2').on('click', handlerPrepend);
+      $('#myButton3').on('click', handlerBefore);
+      $('#myButton4').on('click', handlerAfter);
+    });
+    function handlerAppend(){//option 1
+        $('ul').append('<li class="cool">milk</li>');
+    }
+    function handlerPrepend(){//option 2
+        $('ul').prepend('<li class="hot">bread</li>');
+    }
+    function handlerBefore(){//option 3
+        //Non right position $('ul').before('<li class="hot">butter</li>');
+        $('li#one').before('<li class="hot">butter</li>');
+    }
+    function handlerAfter(){//option 4
+        //$('li#two').after('<li class="cool">eggs</li>');
+        $('li#three').after('<li class="cool">eggs</li>');
+    }
+    </script>
+<body>
+    <div id="page">
+        <h1 id="header">List</h1>
+        <h2>Buy groceries</h2><br/>
+        <h2>In Maxi</h2>
+        <ul>
+            <li id="one"    class="cool"><em>fresh</em> figs</li>
+            <li id="two"    class="hot">pine nuts</li>
+            <li id="three"  class="hot">honey</li>
+            <li id="four">balsamic vinegar</li>
+            <!--li>milk</li-->
+        </ul>
+
+        <input id="myButton1" type="button" value="add new li (append)"/><br/>
+        <input id="myButton2" type="button" value="add new li (prepend)"/><br/>
+        <input id="myButton3" type="button" value="add new li (before)"/><br/>
+        <input id="myButton4" type="button" value="add new li (after)"/><br/>
+    </div>
+
+</body>
+</head>
+</html>
