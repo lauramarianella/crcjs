@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+    $( document ).ready(function() {
+      $('#myButton1').on('click', modify);
+      $('#myButton2').on('click', add);
+      $('#myButton3').on('click', addVersion2);
+      $('#myButton4').on('click', remove);
+    });
+    function modify(){
+        $('img').attr("src","images/catReplace.png");
+    }
+    function add(){
+        let image = new Image();
+        image.src="images/cats.png";
+        $('h2:last').after(image);
+    }
+
+    function addVersion2(){
+        let imageMK = '<img src="images/cats.png" />';
+        $('h2:last').after(imageMK);
+    }
+
+    function remove(){
+        $('img').remove();
+    }
+
+    </script>
+<body>
+    <div id="page">
+        <h1 id="header">List</h1>
+        <h2>Buy groceries</h2><br/>
+        <h2>In Maxi</h2>
+        <img src="images/cats.png">
+        <br/>
+        <input id="myButton1" type="button" value="change it"/><br/>
+        <input id="myButton2" type="button" value="add v1"/><br/>
+        <input id="myButton3" type="button" value="add v2"/><br/>
+        <input id="myButton4" type="button" value="remove"/><br/>
+    </div>    
+</body>
+</head>
+</html>

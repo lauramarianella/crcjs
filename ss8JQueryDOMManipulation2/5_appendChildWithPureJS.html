@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+    (function() {
+        window.addEventListener("load", initialize);
+        function initialize() {
+            let elBtn = document.getElementById('myButton');
+            elBtn.addEventListener('click',handlerAppend);
+
+            document.getElementById('myButton2').addEventListener('click',handlerRemove);
+        }
+    })();
+
+    function handlerAppend(){
+        let elTxtField = document.getElementById('newItem');        
+        let newItem =  elTxtField.value;
+        if(!newItem) return;
+
+        let nodeLi = document.createElement("li");  
+        /*let index = document.getElementsByTagName('li').length+1;
+        nodeLi.setAttribute('id','li_'+index);*/
+        var nodeTxt = document.createTextNode(newItem);
+        nodeLi.appendChild(nodeTxt); 
+
+        document.querySelector('ul').appendChild(nodeLi);
+    }
+
+    /*function handlerRemove(){
+        let index = document.getElementsByTagName('li').length;
+        let elLi = document.getElementById('li_' + index);  
+
+        document.querySelector('ul').removeChild(elLi);
+    }*/
+
+    </script>
+<body>
+    <div id="page">
+        <h1 id="header">List</h1>
+        <h2>Buy groceries</h2><br/>
+        <h2>In Maxi</h2>
+        <ul>
+            <li id="li_1"   class="cool"><em>fresh</em> figs</li>
+            <li id="li_2"   class="hot">pine nuts</li>
+            <li id="li_3"   class="hot">honey</li>
+            <li id="li_4">balsamic vinegar</li>
+            <!--li>milk</li-->
+        </ul>
+        <input type="text" id="newItem" placeholder="Add description..."/>
+        <input id="myButton" type="button" value="add"/><br/>
+        <input id="myButton2" type="button" value="remove"/><br/>
+    </div>
+
+</body>
+</head>
+</html>

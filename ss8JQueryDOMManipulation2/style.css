@@ -56,7 +56,8 @@ h2 span {
   padding: 4px 0 0 0;
 }
 
-ul {
+ul,
+ol {
   border: none;
   padding: 0;
   margin: 0;
@@ -368,4 +369,9 @@ li i {
 
 .myBorder {
   border: #8a4191 solid 2px;
+}
+
+img {
+  width: 400px;
+  height: 200px;
 }

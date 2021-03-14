@@ -12,14 +12,18 @@
 
     <script>
     $( document ).ready(function() {
-      $('#myButton1').on('click', handlerAppend);
+      $('li').on('click', myAnimation);
     });
-    function handlerAppend(){//option 1
-        //let $newItem = $('#newItem').val();
-        //if(!$newItem) return;
-        //$('ul').append('<li class="cool">' + $newItem + '</li>');
-    }
+    function myAnimation(){
+        let padding =$(this ).css("paddingLeft");
+        padding = padding.substring(0,padding.indexOf('px'));
+        if(padding >150) return;
 
+        $(this ).animate( {
+            fontSize: "+=20%",
+            paddingLeft: "+=80"
+        }, 500);
+    }	
     </script>
 <body>
     <div id="page">
@@ -31,10 +35,8 @@
             <li id="two"    class="hot">pine nuts</li>
             <li id="three"  class="hot">honey</li>
             <li id="four">balsamic vinegar</li>
-            <!--li>milk</li-->
         </ul>
-        <input type="text" id="newItem" placeholder="Add description..."/>
-        <input id="myButton1" type="button" value="add"/><br/>
+
     </div>
 
 </body>
