@@ -14,7 +14,7 @@
       let lastname = $("lastname").value;
       url += "?name=" + name;
       url += "&lastname=" + lastname;
-      //alert('This is the resource: ' + url);
+      alert('This is the resource: ' + url);
       console.log('URL: ' + url);
 
       let headers = new Headers();

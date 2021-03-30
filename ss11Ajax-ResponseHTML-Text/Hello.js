@@ -1,5 +1,5 @@
 (function() {
-    const URL = "http://localhost:8081/aboutus";
+    const URL = "http://localhost:8083/hello";
   
     window.addEventListener("load", initialize);
   
@@ -14,7 +14,7 @@
       let lastname = $("lastname").value;
       url += "?name=" + name;
       url += "&lastname=" + lastname;
-      //alert('This is the resource: ' + url);
+      alert('This is the resource: ' + url);
       console.log('URL: ' + url);
 
       let headers = new Headers();
