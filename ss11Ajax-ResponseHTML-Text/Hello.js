@@ -1,5 +1,5 @@
 (function() {
-    const URL = "http://localhost:8083/hello";
+    const URL = "http://localhost:8081/helloText";
   
     window.addEventListener("load", initialize);
   
@@ -12,6 +12,7 @@
       let url = URL;
       let name = $("name").value;
       let lastname = $("lastname").value;
+      
       url += "?name=" + name;
       url += "&lastname=" + lastname;
       alert('This is the resource: ' + url);
