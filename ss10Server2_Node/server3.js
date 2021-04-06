@@ -29,14 +29,13 @@ app.get('/hello', function (req, res) {
     res.send( JSON.stringify({msg:'helloooo '+name}) );
     return;
 });
-
+ 
 app.get('/getBusData', function (req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     let dataToSend = '<div><input type="button" value="click me!!"/><img src="img/map-tx.png" alt="Map of Texas" /></div>';
     res.send( dataToSend );
     return;
 });
-
 
 
 var server = app.listen(PORT, function () {
