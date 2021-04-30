@@ -1,0 +1,23 @@
+{
+  "name": "@d3/sortable-bar-chart",
+  "main": "a1836d740ee4badd@255.js",
+  "version": "255.0.0",
+  "homepage": "https://observablehq.com/@d3/sortable-bar-chart",
+  "author": "D3 (https://observablehq.com/@d3)",
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  },
+  "description": "https://observablehq.com/@d3/sortable-bar-chart@255",
+  "dependencies": {
+    "d3-require": "^1.2.4"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "start": "lite-server",
+    "build": "webpack --mode production"
+  },
+  "license": "ISC"
+}
